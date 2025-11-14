@@ -1,5 +1,5 @@
-import {ArrowRight, BarChart3, CheckCircle, MessageSquare, Shield, TrendingUp, Users, Zap, type LucideIcon} from 'lucide-react'
-import { landingData, uniqueUpdates } from '../assets/assets'
+import {ArrowRight, BarChart3, CheckCircle, Github, Linkedin, Mail, MailIcon, MessageSquare, Shield, TrendingUp, Twitter, Users, Zap, type LucideIcon} from 'lucide-react'
+import { footerLinks, landingData, socialIcons, uniqueUpdates } from '../assets/assets'
 const Landing = () => {
   const iconsMap:Record<string,LucideIcon> = {
     Chart:BarChart3,
@@ -8,7 +8,11 @@ const Landing = () => {
     Check:CheckCircle,
     Lightning:Zap,
     Shield:Shield,
-    Slope:TrendingUp
+    Slope:TrendingUp,
+    Twitter:Twitter,
+    GitHub:Github,
+    LinkedIn:Linkedin,
+    Mail:MailIcon
   }
   return (
     <div>
@@ -81,7 +85,7 @@ const Landing = () => {
         <div className='px-4 py-20 mx-auto flex justify-center bg-gray-50'>
             <div className='bg-white shadow-xl shadow-blue-100 rounded-2xl p-12 max-w-4xl mx-auto space-y-8 text-center'>
                <h1 className='text-5xl text-gray-900 font-bold'>Ready to transform your team?</h1>
-               <p className='text-xl text-gray-300'>Join thousands of teams already using our platform to achieve more together.</p>
+               <p className='text-xl text-gray-400'>Join thousands of teams already using our platform to achieve more together.</p>
                <div className='flex justify-center'>
                    <button className="flex items-center bg-gradient-to-r from-blue-500 to-blue-300 px-8 py-3 rounded-lg cursor-pointer text-white font-medium">
                   Start Free Today
@@ -92,17 +96,37 @@ const Landing = () => {
                </div>
               </div>
         </div>
-        <footer className='bg-gray-50 border-t-1'>
+        <footer className='bg-gray-50 border-t-1 border-gray-300'>
           <div className='px-4 py-8 border-b border-gray-100'>
-            <div className='flex flex-col'> 
-               <h5 style={{fontFamily:"Parisienne"}} className='text-xl text-blue-500 font-semibold'>Horizon</h5>
-               <p className='text-gray-300 max-w-lg text-sm'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+              <div className='space-y-3'> 
+               <h5 style={{fontFamily:"Parisienne"}} className='text-2xl text-blue-500 font-semibold'>Horizon</h5>
+               <p className='text-gray-400 max-w-[300px] text-sm'>
                 Empowering teams to collaborate better, work smarter, and achieve more together.
                </p>
-               <div>
-                 
+               <div className='flex gap-2'>
+                  { socialIcons.map((icon,idx)=>{
+                    const IconComponent = iconsMap[icon]
+                    return(
+                      <div key={idx} className='hover:bg-blue-400 hover:text-white transition-all p-2 rounded-xl cursor-pointer'>
+                         <IconComponent className='w-4 h-4'/>
+                      </div>
+                       )
+                  }) }
                </div>
-           </div>
+              </div>
+                  {footerLinks.map((link,idx)=>(
+                       <div key={idx}>
+                          <h6 className='mb-4 font-medium text-gray-900'>{link.title}</h6>
+                          { link.links.map((l,idx)=>(
+                             <ul key={idx} className='text-sm space-y-2'>
+                               <li className='cursor-pointer'>{l}</li>
+                             </ul>
+                          )) }
+                       </div>
+                  ))}
+            </div>
+            
            <div>
              
            </div>
