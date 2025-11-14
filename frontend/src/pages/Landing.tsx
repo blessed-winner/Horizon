@@ -19,7 +19,7 @@ const Landing = () => {
         <div className="bg-gray-100 px-4 py-24">
             <div className="flex flex-col items-center justify-center">
                <h1 style={{fontFamily:"Parisienne"}} className="text-7xl font-bold text-blue-500 text-center">Horizon</h1>
-               <p className="text-gray-500 max-w-2xl text-center text-2xl mt-4">Collaborate in real-time, track progress and boost your team's productivity with our modern workspace solution</p>
+               <p className="text-gray-500 max-w-2xl text-center text-xl mt-4">Collaborate in real-time, track progress and boost your team's productivity with our modern workspace solution</p>
             </div>
             <div className="bg-primary/40 px-2 py-8 flex justify-center items-center space-x-4 text-white font-medium ">
                 <button className="flex items-center bg-gradient-to-r from-blue-500 to-blue-300 px-8 py-3 rounded-lg cursor-pointer">
