@@ -18,7 +18,7 @@ const Landing = () => {
     <div>
         <div className="bg-gray-100 px-4 py-24">
             <div className="flex flex-col items-center justify-center">
-               <h1 className="text-7xl font-bold text-blue-500 text-center">Team Productivity Hub</h1>
+               <h1 style={{fontFamily:"Parisienne"}} className="text-7xl font-bold text-blue-500 text-center">Horizon</h1>
                <p className="text-gray-500 max-w-2xl text-center text-2xl mt-4">Collaborate in real-time, track progress and boost your team's productivity with our modern workspace solution</p>
             </div>
             <div className="bg-primary/40 px-2 py-8 flex justify-center items-center space-x-4 text-white font-medium ">
@@ -31,7 +31,7 @@ const Landing = () => {
                 <button className='text-black rounded-lg border px-8 py-3 border-gray-300 hover:text-white hover:bg-gradient-to-r from-blue-500 to-blue-300 transition-all cursor-pointer'>Watch Demo</button>
             </div>
         </div>
-        <div className='bg-gradient-to-t from-gray-300 to-gray-50 px-6 py-15'>
+        <div className='bg-gradient-to-t from-gray-200 to-gray-50 px-6 py-15'>
             <div className='flex flex-col items-center space-y-2 p-8'>
               <h2 className='text-gray-800 text-4xl font-bold'>Everything you need to succeed</h2>
               <p className='text-gray-500 text-lg'>Powerful features to keep your team aligned and productive</p>
@@ -98,7 +98,7 @@ const Landing = () => {
         </div>
         <footer className='bg-gray-50 border-t-1 border-gray-300'>
           <div className='px-4 py-8 border-b border-gray-100'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-8 border-b border-gray-300'>
               <div className='space-y-3'> 
                <h5 style={{fontFamily:"Parisienne"}} className='text-2xl text-blue-500 font-semibold'>Horizon</h5>
                <p className='text-gray-400 max-w-[300px] text-sm'>
@@ -119,16 +119,15 @@ const Landing = () => {
                        <div key={idx}>
                           <h6 className='mb-4 font-medium text-gray-900'>{link.title}</h6>
                           { link.links.map((l,idx)=>(
-                             <ul key={idx} className='text-sm space-y-2'>
-                               <li className='cursor-pointer'>{l}</li>
+                             <ul key={idx} className='text-sm'>
+                               <li className='cursor-pointer mb-2 text-gray-400'>{l}</li>
                              </ul>
                           )) }
                        </div>
                   ))}
             </div>
-            
-           <div>
-             
+           <div className='flex justify-center pt-6'>
+              <p className='text-gray-500 text-sm text-shadow-md'>&copy; 2025 <span style={{fontFamily:"Parisienne"}} className='text-blue-500'>Horizon.</span> All Rights Reserved.</p>
            </div>
           </div>
          </footer>
