@@ -11,10 +11,10 @@ const Landing = () => {
     Slope:TrendingUp
   }
   return (
-    <div >
+    <div>
         <div className="bg-gray-100 px-4 py-24">
             <div className="flex flex-col items-center justify-center">
-               <h1 className="text-7xl font-bold text-blue-500">Team Productivity Hub</h1>
+               <h1 className="text-7xl font-bold text-blue-500 text-center">Team Productivity Hub</h1>
                <p className="text-gray-500 max-w-2xl text-center text-2xl mt-4">Collaborate in real-time, track progress and boost your team's productivity with our modern workspace solution</p>
             </div>
             <div className="bg-primary/40 px-2 py-8 flex justify-center items-center space-x-4 text-white font-medium ">
@@ -32,7 +32,7 @@ const Landing = () => {
               <h2 className='text-gray-800 text-4xl font-bold'>Everything you need to succeed</h2>
               <p className='text-gray-500 text-lg'>Powerful features to keep your team aligned and productive</p>
             </div>
-            <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 px-12 py-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8  mx-auto max-w-6xl'>
                {landingData.map((data,idx)=>{
                 const IconComponent = iconsMap[data.icon] ;
                 return(
@@ -48,28 +48,46 @@ const Landing = () => {
                 )
                 })}
             </div>
-            <div className='px-6 py-15'>
+              <div className='mx-auto px-4 py-12'>
+                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center'>
                <div>
-                <h2 className='text-gray-800 text-4xl font-bold'>Why teams love our platform</h2>
+                <h2 className='text-gray-800 text-4xl font-bold mb-6'>Why teams love our platform</h2>
                 <p className='text-gray-500 text-lg'>Built for modern teams who demand speed, reliability, and seamless collaboration</p>
-                <div className='px-5 py-8 space-y-4'>
+                   <div className='py-8 space-y-4'>
                   {uniqueUpdates.map((data,idx)=>{
                      const IconComponent = iconsMap[data.icon]
                      return(
                        <div key={idx} className='flex flex-col justify-center'>
                         <div className='flex items-center gap-3 mb-2'>
                           <IconComponent className='w-5 h-5 text-blue-500'/>
-                           <h5 className='font-medium text-lg'>{data.title}</h5> 
+                           <h5 className='font-medium text-md'>{data.title}</h5> 
                         </div>
                          <p className='text-gray-500 text-md pl-8'>{data.text}</p>
                       </div>
                      )
                   })}
                 </div>
+            </div>
+            <div className='flex justify-center'>
+                <div className='bg-white rounded-2xl w-[525px] h-[325px] flex items-center justify-center shadow-glow p-8'>
+                   <div className='bg-blue-100 p-4 rounded-lg h-[260px] w-[460px] flex justify-center items-center'>
+                       <BarChart3 className='text-blue-300 w-25 h-25'/>
+                    </div>
                </div>
-               <div>
-
-               </div>
+            </div>
+              </div>
+              </div>
+        </div>
+        <div className='py-12 flex justify-center'>
+            <div className='bg-amber-50 shadow-xl shadow-blue-100'>
+               <h1 className='text-4xl text-gray-900'>Ready to transform your team?</h1>
+               <p>Join thousands of teams already using our platform to achieve more together.</p>
+               <button className="flex items-center bg-gradient-to-r from-blue-500 to-blue-300 px-8 py-3 rounded-lg cursor-pointer">
+                  Start Free Today
+                  <span className='pl-2'>
+                    <ArrowRight className='size-4'/>
+                  </span>
+                </button>
             </div>
         </div>
     </div>
