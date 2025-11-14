@@ -78,18 +78,36 @@ const Landing = () => {
               </div>
               </div>
         </div>
-        <div className='py-12 flex justify-center'>
-            <div className='bg-amber-50 shadow-xl shadow-blue-100'>
-               <h1 className='text-4xl text-gray-900'>Ready to transform your team?</h1>
-               <p>Join thousands of teams already using our platform to achieve more together.</p>
-               <button className="flex items-center bg-gradient-to-r from-blue-500 to-blue-300 px-8 py-3 rounded-lg cursor-pointer">
+        <div className='px-4 py-20 mx-auto flex justify-center bg-gray-50'>
+            <div className='bg-white shadow-xl shadow-blue-100 rounded-2xl p-12 max-w-4xl mx-auto space-y-8 text-center'>
+               <h1 className='text-5xl text-gray-900 font-bold'>Ready to transform your team?</h1>
+               <p className='text-xl text-gray-300'>Join thousands of teams already using our platform to achieve more together.</p>
+               <div className='flex justify-center'>
+                   <button className="flex items-center bg-gradient-to-r from-blue-500 to-blue-300 px-8 py-3 rounded-lg cursor-pointer text-white font-medium">
                   Start Free Today
                   <span className='pl-2'>
                     <ArrowRight className='size-4'/>
                   </span>
                 </button>
-            </div>
+               </div>
+              </div>
         </div>
+        <footer className='bg-gray-50 border-t-1'>
+          <div className='px-4 py-8 border-b border-gray-100'>
+            <div className='flex flex-col'> 
+               <h5 style={{fontFamily:"Parisienne"}} className='text-xl text-blue-500 font-semibold'>Horizon</h5>
+               <p className='text-gray-300 max-w-lg text-sm'>
+                Empowering teams to collaborate better, work smarter, and achieve more together.
+               </p>
+               <div>
+                 
+               </div>
+           </div>
+           <div>
+             
+           </div>
+          </div>
+         </footer>
     </div>
   )
 }

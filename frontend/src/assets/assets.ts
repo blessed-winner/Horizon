@@ -43,4 +43,27 @@ export const uniqueUpdates:landingItem[] = [
         text:"Increase team efficiency by up to 40%"
     }
 ]
+
+interface FooterLinks{
+    title:string,
+    links:string[]
+}
+
+export const footerLinks:FooterLinks[] = [
+    {
+        title:"Product",
+        links:[ "Features","Pricing","Security","Roadmap" ]
+    },
+    {
+        title:"Company",
+        links:[ "About","Blog", "Careers", "Contact" ]
+    },
+    {
+        title:"Legal",
+        links:[ "Privacy","Terms","Cookie Policy","Licences" ]
+    }
+]
+
+
+export const socialIcons = [ "Twitter","GitHub","LinkedIn","Mail" ]
     
