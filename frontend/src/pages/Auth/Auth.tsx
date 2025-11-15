@@ -1,7 +1,9 @@
-import { LogIn } from "lucide-react"
+import { LogIn, UserPlus } from "lucide-react"
+import { useState } from "react";
 
 const Auth = () => {
-  return (
+     const [authMode,setAuthMode] = useState<"signin" | "signup">("signin");
+      return (
     <div className="bg-gray-100 min-h-screen flex items-center justify-center">
       <form className="bg-white rounded-2xl px-6 py-8 min-w-md">
         <div className="text-center">
@@ -10,10 +12,10 @@ const Auth = () => {
         </div>
          <div className="bg-gray-100 relative mt-4 rounded-xl px-4 py-2.5 mb-4">
           <div className="font-medium text-sm flex justify-between gap-2 text-gray-500">
-           <span className="z-1 w-[50%] cursor-pointer flex justify-center">Sign In</span>
-           <span className="z-1 w-[50%] cursor-pointer flex justify-center">Sign Up</span>
+           <span onClick={()=>setAuthMode("signin")} className={`z-1 w-[50%] cursor-pointer flex justify-center ${authMode === 'signin' && 'text-gray-700'}`}>Sign In</span>
+           <span onClick={()=>setAuthMode("signup")} className={`z-1 w-[50%] cursor-pointer flex justify-center ${authMode === 'signup' && 'text-gray-700'}`}>Sign Up</span>
           </div>
-           <div className="bg-white rounded-xl absolute top-1 left-1 w-[50%] h-8"></div>
+           <div className={`bg-white rounded-xl absolute top-1 w-[50%] h-8 ${authMode === "signin" ? "left-1" : "left-[50%]"}`}></div>
         </div>
         <div className="space-y-3">
            <div className="flex flex-col text-sm space-y-2">
@@ -26,8 +28,8 @@ const Auth = () => {
         </div>
         </div>
          <button className="mt-4 text-xs bg-gradient-to-r from-blue-600 to-blue-400 text-white w-full px-4 py-3 rounded-xl cursor-pointer flex items-center justify-center gap-3 font-medium">
-          <LogIn className="w-4 h-4"/>
-          Sign In
+          {authMode === "signin" ? <LogIn className="w-4 h-4"/> : <UserPlus className="w-4 h-4"/>}
+          {authMode === "signin" ? "Sign in" : "Create Account"}
           </button>
       </form>
   </div>
