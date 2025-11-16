@@ -17,7 +17,7 @@ const App = () => {
                 <Route index element = { <Dashboard/> }/>
                 <Route path="chat" element = { <Chat/> }/>
                 <Route path="team" element = { <Team/> }/>
-                <Route path="Settings" element = { <Settings/> }/>
+                <Route path="settings" element = { <Settings/> }/>
                 <Route path="tasks" element = { <Tasks/> }/>
            </Route>
       </Routes>
