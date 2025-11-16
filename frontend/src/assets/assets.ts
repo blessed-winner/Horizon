@@ -66,4 +66,37 @@ export const footerLinks:FooterLinks[] = [
 
 
 export const socialIcons = [ "Twitter","GitHub","LinkedIn","Mail" ]
+
+interface DashboardData{
+    title:string,
+    numbers:string,
+    statistics:string,
+    icon:string
+}
+export const dashboardData:DashboardData[] = [
+    {
+        title:"Total Tasks",
+        numbers:"142",
+        statistics:"+12% from last month",
+        icon:"CheckCircle"
+    },
+    {
+        title:"Active Users",
+        numbers:"32",
+        statistics:"24 active now",
+        icon:"Users"
+    },
+    {
+        title:"Messages Today",
+        numbers:"562",
+        statistics:"+18% from yesterday",
+        icon:"MessageSquare"
+    },
+    {
+        title:"Avg Response Time",
+        numbers:"2.4h",
+        statistics:"-0.3h improvement",
+        icon:"Clock"
+    }
+]
     
