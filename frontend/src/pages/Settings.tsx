@@ -1,6 +1,6 @@
 const Settings = () => {
   return (
-    <div>Settings</div>
+    <div className="flex-1 relative top-16">Settings</div>
   )
 }
 

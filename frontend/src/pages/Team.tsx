@@ -1,6 +1,6 @@
 const Team = () => {
   return (
-    <div>Team</div>
+    <div className="flex-1 relative top-16">Team</div>
   )
 }
 

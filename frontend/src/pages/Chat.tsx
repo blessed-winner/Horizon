@@ -1,6 +1,6 @@
 const Chat = () => {
   return (
-    <div>Chat</div>
+    <div className="flex-1 relative top-16">Chat</div>
   )
 }
 

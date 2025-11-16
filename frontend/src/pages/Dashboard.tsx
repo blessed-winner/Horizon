@@ -1,6 +1,6 @@
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className="flex-1 relative top-16">Dashboard</div>
   )
 }
 
