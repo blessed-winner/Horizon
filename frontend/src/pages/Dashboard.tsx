@@ -2,6 +2,7 @@ import { CheckCircle, Clock, MessageSquare, Users, type LucideIcon } from "lucid
 import { dashboardData } from "../assets/assets"
 import PieChartComponent from "../components/PieChartComponent"
 import BarChartComponent from "../components/BarChartComponent"
+import LineChartComponent from "../components/LineChartComponent"
 
 const Dashboard = () => {
   const iconsMap:Record<string,LucideIcon> = {
@@ -33,8 +34,8 @@ const Dashboard = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
              <div className="bg-white rounded-2xl p-6 shadow-xl space-y-12">
                <div className="space-y-1">
-                  <h2 className="text-2xl font-semibold text-gray-800">Daily Chat Activity</h2>
-                  <p className="text-xs text-gray-400">Message trends over the past week</p>    
+                  <h2 className="text-2xl font-semibold text-gray-800">Task Completion Rate</h2>
+                  <p className="text-xs text-gray-400">Distribution of tasks by status</p>    
                </div>
                  <PieChartComponent/>
              </div>
@@ -42,6 +43,22 @@ const Dashboard = () => {
                <div className="space-y-1">
                   <h2 className="text-2xl font-semibold text-gray-800">User Activity</h2>
                   <p className="text-xs text-gray-400">Active vs idle users</p>    
+               </div>
+               <BarChartComponent/>
+             </div>
+          </div>
+           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+             <div className="bg-white rounded-2xl p-6 shadow-xl space-y-12">
+               <div className="space-y-1">
+                  <h2 className="text-2xl font-semibold text-gray-800">Daily Chat Activity</h2>
+                  <p className="text-xs text-gray-400">Message trends over the past week</p>    
+               </div>
+                 <LineChartComponent/>
+             </div>
+             <div className="bg-white rounded-2xl p-6 shadow-xl space-y-12">
+               <div className="space-y-1">
+                  <h2 className="text-2xl font-semibold text-gray-800">Project Progress</h2>
+                  <p className="text-xs text-gray-400">Completion status of active projects</p>    
                </div>
                <BarChartComponent/>
              </div>
