@@ -30,7 +30,7 @@ const Dashboard = () => {
              })}
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-             <div className="bg-white rounded-2xl p-6 shadow-xl">
+             <div className="bg-white rounded-2xl p-6 shadow-xl space-y-12">
                <div className="space-y-1">
                   <h2 className="text-2xl font-semibold text-gray-800">Daily Chat Activity</h2>
                   <p className="text-xs text-gray-400">Message trends over the past week</p>    

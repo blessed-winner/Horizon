@@ -107,7 +107,7 @@ type Point = {
 
 export const pieData:Point[] = [
   {name:"Completed", value:68},
-  {name:"inProgress",value:22},
+  {name:"In Progress",value:22},
   {name:"Pending",value:10}
 ]
 
