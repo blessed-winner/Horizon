@@ -4,16 +4,14 @@ import Navbar from "../components/Navbar"
 
 const Layout = () => {
   return (
-    <div>
-        
-        <div className="flex lg:h-[100vh]">
-           <Sidebar/>
-           <div className="flex flex-col overflow-hidden">
-              <Navbar/> 
-              <Outlet/>
-           </div>
-            
-           </div>
+    <div className="flex h-screen w-screen">
+      <Sidebar/>
+      <div className="flex flex-col flex-1 overflow-hidden bg-blue-50/50">
+        <Navbar/>
+        <main className="flex-1 overflow-auto">
+          <Outlet/>
+        </main>
+      </div>
     </div>
   )
 }

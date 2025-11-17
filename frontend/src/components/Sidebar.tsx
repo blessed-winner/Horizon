@@ -2,7 +2,7 @@ import { LayoutDashboard, LogOut, MessageSquare, Settings, SquareCheckBig, Users
 import { NavLink } from "react-router-dom"
 const Sidebar = () => {
   return (
-    <div className="flex flex-col min-h-screen w-20 lg:w-60 border-r border-gray-300">
+    <div className="flex flex-col h-full w-20 lg:w-60 border-r border-gray-300 bg-white z-30">
         <div className="space-y-3 p-1 mx-auto lg:p-4">
             <h2 className="text-xl lg:text-3xl text-blue-400" style={{fontFamily:'Parisienne'}}>Horizon</h2>
             <p className="text-gray-500  text-xs">Productivity Central</p>

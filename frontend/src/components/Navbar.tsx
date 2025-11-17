@@ -2,7 +2,7 @@ import { Bell, Moon, X } from "lucide-react"
 
 const Navbar = () => {
   return (
-    <div className="fixed top-0 right-0 left-21 lg:left-61 flex justify-between items-center h-16 px-12 border-b border-gray-300">
+    <div className="sticky top-0 flex justify-between items-center h-16 px-12 bg-white border-b border-gray-300 z-20">
       <span className="p-2 hover:bg-blue-400 hover:text-white transition rounded-xl cursor-pointer">
           <X className="cursor-pointer size-4"/>
       </span>
