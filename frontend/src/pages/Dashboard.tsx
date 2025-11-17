@@ -1,6 +1,7 @@
 import { CheckCircle, Clock, MessageSquare, Users, type LucideIcon } from "lucide-react"
 import { dashboardData } from "../assets/assets"
 import PieChartComponent from "../components/PieChartComponent"
+import BarChartComponent from "../components/BarChartComponent"
 
 const Dashboard = () => {
   const iconsMap:Record<string,LucideIcon> = {
@@ -37,11 +38,12 @@ const Dashboard = () => {
                </div>
                  <PieChartComponent/>
              </div>
-             <div className="bg-white rounded-2xl p-6 shadow-xl">
+             <div className="bg-white rounded-2xl p-6 shadow-xl space-y-12">
                <div className="space-y-1">
                   <h2 className="text-2xl font-semibold text-gray-800">User Activity</h2>
                   <p className="text-xs text-gray-400">Active vs idle users</p>    
                </div>
+               <BarChartComponent/>
              </div>
           </div>
       </div>
