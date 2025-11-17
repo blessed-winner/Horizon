@@ -28,6 +28,14 @@ const Dashboard = () => {
                )
              })}
           </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+             <div className="bg-white rounded-2xl p-3 shadow-xl">
+                 
+             </div>
+             <div className="bg-white rounded-2xl p-3 shadow-xl">
+
+             </div>
+          </div>
       </div>
     </div>
   )

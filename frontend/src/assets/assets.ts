@@ -99,4 +99,33 @@ export const dashboardData:DashboardData[] = [
         icon:"Clock"
     }
 ]
+
+interface Point{
+    name:string,
+    value:number
+}
+
+export const pieData:Point[] = [
+  {name:"Completed", value:68},
+  {name:"inProgress",value:22},
+  {name:"Pending",value:10}
+]
+
+export const barData:Point[] = [
+    {name:"Active",value:24},
+    {name:"Idle",value:8}
+]
+
+export const lineData:Point[] = [
+    {name:"Mon",value:45},
+    {name:"Tue",value:60},
+    {name:"Wed",value:54},
+    {name:"Thur",value:77},
+    {name:"Fri",value:80},
+    {name:"Sat",value:32},
+    {name:"Sun",value:27}
+]
+    
+
+
     
