@@ -100,7 +100,7 @@ export const dashboardData:DashboardData[] = [
     }
 ]
 
-interface Point{
+type Point = {
     name:string,
     value:number
 }
