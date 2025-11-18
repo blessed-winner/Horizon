@@ -165,6 +165,22 @@ export const tasks:Task[] = [
   { title:"Write documentation", priority:"high", dueDate:"2024-01-30", status:"In Progress" },
   { title:"Code review for feature X", priority:"low", dueDate:"2024-01-18", status:"Pending" }
 ]
+
+type Role = "Admin" | "Developer" | "Designer" | "Manager"
+type User = {
+    firstName:string,
+    lastName:string,
+    role:Role,
+    email:string
+}
+
+export const userData:User[] = [
+    { firstName:"Alice",lastName:"Johnson", role:"Admin", email:"alice@example.com" },
+    { firstName:"Bob", lastName:"Smith", role:"Developer", email:"bob@example.com" },
+    { firstName:"Carol", lastName:"White", role:"Designer", email:"carol@example.com" },
+    { firstName:"David", lastName:"Brown", role:"Developer", email:"david@example.com" },
+    { firstName:"Eve", lastName:"Davis", role:"Manager", email:"eve@example.com" }
+]
     
 
 
