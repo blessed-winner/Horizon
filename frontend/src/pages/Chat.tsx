@@ -41,7 +41,7 @@ const Chat = () => {
                  <MessageSquare className="animate-bounce text-blue-400"/>
             </div>
             <div className="border-t border-gray-300 flex items-center justify-center h-18 p-3 gap-2">
-               <input type="text" className="border border-gray-300 rounded-lg w-[70%] px-4 py-1 placeholder:text-sm" placeholder="Type a message..."/>
+               <input type="text" className="border border-gray-300 rounded-lg w-[70%] px-4 py-1 placeholder:text-sm outline-none" placeholder="Type a message..."/>
                <span className="bg-blue-500/80 w-8 h-8 flex items-center rounded-lg justify-center text-white">
                  <Send className="w-5 h-5"/>
                </span>
