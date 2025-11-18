@@ -1,4 +1,4 @@
-import { MessageSquare, Users } from "lucide-react"
+import { MessageSquare, Send, Users } from "lucide-react"
 
 const Chat = () => {
   const users = [ "Mike","Sarah","Alex","Emma" ]
@@ -27,17 +27,24 @@ const Chat = () => {
             )) }
           </div>
           </div>
-          <div className="bg-white rounded-xl shadow-lg">
+          <div className="bg-white rounded-xl shadow-lg flex-1">
             <div className="border-b border-gray-300 p-6 flex justify-between items-center">
               <div className="flex items-center gap-3">
                  <MessageSquare className="w-5 h-5 text-blue-400"/>
-                 <h4 className="font-semibold text-lg">Team Chat</h4>
+                 <h4 className="font-semibold text-gray-800 text-md">Team Chat</h4>
               </div>
               <p className="px-3 py-1
               font-semibold text-xs rounded-full border text-gray-800 border-gray-500">General</p>
             </div>
-            <div className="overflow-y-auto">
-              
+            <div className="overflow-y-auto flex items-center justify-center max-h-60 h-58">
+                 {/* Implementing realtime messaging */}
+                 <MessageSquare className="animate-bounce text-blue-400"/>
+            </div>
+            <div className="border-t border-gray-300 flex items-center justify-center h-18 p-3 gap-2">
+               <input type="text" className="border border-gray-300 rounded-lg w-[70%] px-4 py-1 placeholder:text-sm" placeholder="Type a message..."/>
+               <span className="bg-blue-500/80 w-8 h-8 flex items-center rounded-lg justify-center text-white">
+                 <Send className="w-5 h-5"/>
+               </span>
             </div>
           </div>
           </div>

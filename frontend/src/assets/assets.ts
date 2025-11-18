@@ -139,11 +139,14 @@ export const progressBars:Progress[] = [
 ]
 
 type Message = {
-    
+    sender:string,
+    content:string
 }
 
-export const messages = [
-
+export const messages:Message[] = [
+  { sender:"Sarah", content:"Hey team! Welcome to our productivity hub" },
+  { sender:"Mike", content:"This is amazing! love the realtime features" },
+  { sender:"You", content:"Can't wait to start collaborating here" }
 ]
     
 
