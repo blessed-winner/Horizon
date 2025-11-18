@@ -8,26 +8,26 @@ const Sidebar = () => {
             <p className="text-gray-500  text-xs">Productivity Central</p>
         </div>
         <div className="space-y-2 mt-4 border-t border-gray-300 p-1 lg:p-4">
-           <NavLink end={true} to='/admin' className={({isActive})=>`flex py-3.5 px-3 md:px-9 items-center justify-center lg:justify-start rounded-xl text-sm gap-3 min-w-0 font-medium ${isActive && " bg-blue-500 text-white"}`} >
+           <NavLink end={true} to='/admin' className={({isActive})=>`flex py-3.5 px-3 md:px-9 items-center justify-center lg:justify-start rounded-xl text-sm gap-3 min-w-0 font-medium ${isActive ? " bg-blue-500 text-white" : "hover:bg-gray-100/70"}`} >
             <LayoutDashboard className='min-w-4 w-5' />
             <p className='hidden lg:inline-block'>Dashboard</p>
         </NavLink>
-             <NavLink to='/admin/chat' className={({isActive})=>`flex py-3.5 px-3 md:px-9 items-center justify-center lg:justify-start rounded-xl text-sm gap-3 min-w-0 font-medium ${isActive && " bg-blue-500 text-white"}`} >
+             <NavLink to='/admin/chat' className={({isActive})=>`flex py-3.5 px-3 md:px-9 items-center justify-center lg:justify-start rounded-xl text-sm gap-3 min-w-0 font-medium ${isActive ? " bg-blue-500 text-white" : "hover:bg-gray-100/70"}`} >
             <MessageSquare className='min-w-4 w-5' />
             <p className='hidden lg:inline-block'>Chat</p>
         </NavLink>
 
-             <NavLink to='/admin/tasks' className={({isActive})=>`flex py-3.5 px-3 md:px-9 items-center justify-center lg:justify-start rounded-xl text-sm gap-3 min-w-0 font-medium ${isActive && " bg-blue-500 text-white"}`} >
+             <NavLink to='/admin/tasks' className={({isActive})=>`flex py-3.5 px-3 md:px-9 items-center justify-center lg:justify-start rounded-xl text-sm gap-3 min-w-0 font-medium ${isActive ? " bg-blue-500 text-white" : "hover:bg-gray-100/70"}`} >
             <SquareCheckBig className='min-w-4 w-5' />
             <p className='hidden lg:inline-block'>Tasks</p>
         </NavLink>
          
-              <NavLink to='/admin/team' className={({isActive})=>`flex py-3.5 px-3 md:px-9 items-center justify-center lg:justify-start rounded-xl text-sm gap-3 min-w-0 font-medium ${isActive && " bg-blue-500 text-white"}`} >
+              <NavLink to='/admin/team' className={({isActive})=>`flex py-3.5 px-3 md:px-9 items-center justify-center lg:justify-start rounded-xl text-sm gap-3 min-w-0 font-medium ${isActive ? " bg-blue-500 text-white" : "hover:bg-gray-100/70"}`} >
             <Users className='min-w-4 w-5' />
             <p className='hidden lg:inline-block'>Team</p>
         </NavLink>
 
-             <NavLink to='/admin/settings' className={({isActive})=>`flex py-3.5 px-3 md:px-9 items-center justify-center lg:justify-start rounded-xl text-sm gap-3 min-w-0 font-medium ${isActive && " bg-blue-500 text-white"}`} >
+             <NavLink to='/admin/settings' className={({isActive})=>`flex py-3.5 px-3 md:px-9 items-center justify-center lg:justify-start rounded-xl text-sm gap-3 min-w-0 font-medium ${isActive ? " bg-blue-500 text-white" : "hover:bg-gray-100/70"}`} >
             <Settings className='min-w-4 w-5' />
             <p className='hidden lg:inline-block'>Settings</p>
         </NavLink>
