@@ -137,6 +137,14 @@ export const progressBars:Progress[] = [
     { title:"API Integration", progress:45 },
     { title:"Marketing Campaign", progress: 90 }
 ]
+
+type Message = {
+    
+}
+
+export const messages = [
+
+]
     
 
 

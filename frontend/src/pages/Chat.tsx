@@ -1,11 +1,11 @@
-import { Users } from "lucide-react"
+import { MessageSquare, Users } from "lucide-react"
 
 const Chat = () => {
   const users = [ "Mike","Sarah","Alex","Emma" ]
   return (
     <div className="flex-1 p-6 md:p-10">
-       <div className="flex gap-8">
-          <div className="bg-white rounded-xl p-5 max-w-60 w-60 space-y-4 shadow-2xl">
+       <div className="flex gap-6 flex-col lg:flex-row ">
+          <div className="bg-white rounded-xl p-5 min-w-60 space-y-4 shadow-2xl">
              <div className="flex justify-between items-center">
               <span className="flex gap-2 items-center">
                 <Users className="text-blue-400 w-5 h-5"/>
@@ -13,7 +13,7 @@ const Chat = () => {
               </span>
               <p className="bg-gray-300 text-gray-800 text-sm w-7 h-5.5 flex items-center justify-center rounded-full font-light">4</p>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4 overflow-y-auto max-h-[350px]">
             { users.map((user,idx)=>(
               <div key={idx} className="flex gap-3 hover:bg-gray-100/70 px-2 py-3 rounded-xl cursor-pointer">
                 <div className="bg-blue-400 text-white w-10 h-10 flex items-center justify-center rounded-full">
@@ -26,6 +26,19 @@ const Chat = () => {
               </div>
             )) }
           </div>
+          </div>
+          <div className="bg-white rounded-xl shadow-lg">
+            <div className="border-b border-gray-300 p-6 flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                 <MessageSquare className="w-5 h-5 text-blue-400"/>
+                 <h4 className="font-semibold text-lg">Team Chat</h4>
+              </div>
+              <p className="px-3 py-1
+              font-semibold text-xs rounded-full border text-gray-800 border-gray-500">General</p>
+            </div>
+            <div className="overflow-y-auto">
+              
+            </div>
           </div>
           </div>
     </div>
