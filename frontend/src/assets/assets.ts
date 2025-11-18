@@ -148,6 +148,23 @@ export const messages:Message[] = [
   { sender:"Mike", content:"This is amazing! love the realtime features" },
   { sender:"You", content:"Can't wait to start collaborating here" }
 ]
+
+type Priority = "high" | "medium" |"low" 
+type Status = "Pending" | "Completed" | "In Progress"
+type Task = {
+  title:string,
+  priority:Priority,
+  dueDate:string,
+  status:Status
+}
+
+export const tasks:Task[] = [
+  { title:"Design new landing page", priority:"high", dueDate:"2024-01-20", status:"In Progress" },
+  { title:"Implement authentication", priority:"high", dueDate:"2024-01-15", status:"Completed" },
+  { title:"Setup analytics dashboard", priority:"medium", dueDate:"2024-01-25", status:"Pending" },
+  { title:"Write documentation", priority:"high", dueDate:"2024-01-30", status:"In Progress" },
+  { title:"Code review for feature X", priority:"high", dueDate:"2024-01-18", status:"Pending" }
+]
     
 
 
