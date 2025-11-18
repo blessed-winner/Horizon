@@ -163,7 +163,7 @@ export const tasks:Task[] = [
   { title:"Implement authentication", priority:"high", dueDate:"2024-01-15", status:"Completed" },
   { title:"Setup analytics dashboard", priority:"medium", dueDate:"2024-01-25", status:"Pending" },
   { title:"Write documentation", priority:"high", dueDate:"2024-01-30", status:"In Progress" },
-  { title:"Code review for feature X", priority:"high", dueDate:"2024-01-18", status:"Pending" }
+  { title:"Code review for feature X", priority:"low", dueDate:"2024-01-18", status:"Pending" }
 ]
     
 
