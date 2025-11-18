@@ -1,4 +1,4 @@
-import { MessageSquare, Send, Users } from "lucide-react"
+import { MessageSquare, Mic, Plus, Send, Users } from "lucide-react"
 
 const Chat = () => {
   const users = [ "Mike","Sarah","Alex","Emma" ]
@@ -41,7 +41,13 @@ const Chat = () => {
                  <MessageSquare className="animate-bounce text-blue-400"/>
             </div>
             <div className="border-t border-gray-300 flex items-center justify-center h-18 p-3 gap-2">
-               <input type="text" className="border border-gray-300 rounded-lg text-xs text-gray-800 w-[70%] px-4 h-10 placeholder:text-xs outline-none" placeholder="Type a message..."/>
+              <div  className="border relative border-gray-300 rounded-lg text-xs text-gray-800 w-[70%] px-4 h-10 flex items-center">
+                  <input type="text" className="placeholder:text-xs outline-none w-[75%]" placeholder="Type a message..."/>
+              </div>
+               <div className="flex gap-2 absolute right-60">
+                 <Plus className="w-5 h-5 text-gray-600"/>
+                 <Mic className="w-5 h-5 text-gray-600"/>
+               </div>
                <span className="bg-blue-500/80 w-10 h-10 flex items-center rounded-lg justify-center text-white cursor-pointer">
                  <Send className="w-5 h-5"/>
                </span>
