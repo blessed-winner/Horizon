@@ -20,14 +20,16 @@ const LineChartComponent = () => {
                           }}>
                             <strong>{label}</strong>
                             <br/>
-                            messages : {payload[0].value}
-                          </div>  
+                            <span className="text-sm text-blue-400">
+                               messages : {payload[0].value}
+                            </span>
+                            </div>  
                         )
                     }
                     return null
                 }}
                 />
-                <Line type="monotone" dataKey="messages" stroke="#29A9FF" strokeWidth={3} dot={{ r: 4 }} activeDot={{ r: 6 }}/>
+                <Line type="monotone" dataKey="value" stroke="#29A9FF" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 6 }}/>
             </LineChart>
         </ResponsiveContainer>
     </div>

@@ -125,6 +125,18 @@ export const lineData:Point[] = [
     {name:"Sat",value:32},
     {name:"Sun",value:27}
 ]
+
+type Progress = {
+    title:string,
+    progress:number
+}
+
+export const progressBars:Progress[] = [
+    { title:"Website Redesign", progress:85 },
+    { title:"Mobile App", progress:60 },
+    { title:"API Integration", progress:45 },
+    { title:"Marketing Campaign", progress: 90 }
+]
     
 
 

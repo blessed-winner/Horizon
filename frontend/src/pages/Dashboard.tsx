@@ -3,6 +3,7 @@ import { dashboardData } from "../assets/assets"
 import PieChartComponent from "../components/PieChartComponent"
 import BarChartComponent from "../components/BarChartComponent"
 import LineChartComponent from "../components/LineChartComponent"
+import ProgressBarsComponent from "../components/ProgressBarsComponent"
 
 const Dashboard = () => {
   const iconsMap:Record<string,LucideIcon> = {
@@ -60,7 +61,7 @@ const Dashboard = () => {
                   <h2 className="text-2xl font-semibold text-gray-800">Project Progress</h2>
                   <p className="text-xs text-gray-400">Completion status of active projects</p>    
                </div>
-               <BarChartComponent/>
+               <ProgressBarsComponent/>
              </div>
           </div>
       </div>
