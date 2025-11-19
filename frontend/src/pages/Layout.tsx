@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar"
 
 const Layout = () => {
   return (
-    <div className="flex h-screen w-screen">
+    <div className="flex h-[100vh]">
       <Sidebar/>
       <div className="flex flex-col flex-1 overflow-hidden bg-blue-50/50">
         <Navbar/>

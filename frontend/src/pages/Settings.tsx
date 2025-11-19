@@ -31,17 +31,17 @@ const Settings = () => {
           </div>
           </div>
         </div>
-        <div>
-          <div>
-            <h2>Notifications</h2>
-            <p>Configure how you receive notifications</p>
+        <div className="space-y-3 bg-white px-8 py-12 rounded-xl shadow-lg">
+          <div className="space-y-1">
+            <h2 className="font-semibold text-gray-800 text-2xl">Notifications</h2>
+            <p className="text-xs text-light text-gray-500">Configure how you receive notifications</p>
           </div>
-          <div>
+          <div className="space-y-2">
             { notificationSettings.map((data,idx)=>(
-              <div key={idx}>
-                <div>
-                <h5>{data.title}</h5>
-                <p>{data.desc}</p>
+              <div key={idx} className="flex justify-between py-2 border-b border-gray-300 last:border-b-0">
+                <div className="space-y-1">
+                <h5 className="font-semibold text-gray-700 text-sm">{data.title}</h5>
+                <p className="text-xs text-gray-500">{data.desc}</p>
                 </div>
                 <div>
                   <label className="relative inline-flex items-center cursor-pointer">
@@ -57,16 +57,16 @@ const Settings = () => {
             )) }
           </div>
         </div>
-        <div>
-          <div>
-            <h2>Appearance</h2>
-            <p>Customize how the app looks</p>
+        <div className="space-y-3 bg-white px-8 py-12 rounded-xl shadow-lg">
+          <div className="space-y-1">
+            <h2 className="font-semibold text-gray-800 text-2xl">Appearance</h2>
+            <p className="text-xs text-gray-500">Customize how the app looks</p>
           </div>
           <div>
-            <div>
-              <div>
-                <h4>Dark Mode</h4>
-                <p>Toggle dark/light theme</p>
+            <div className="flex justify-between">
+              <div className="space-y-1">
+                <h4 className="text-sm text-gray-700 font-semibold">Dark Mode</h4>
+                <p className="text-gray-500 text-xs">Toggle dark/light theme</p>
               </div>
               <div>
                   <label className="relative inline-flex items-center cursor-pointer">
