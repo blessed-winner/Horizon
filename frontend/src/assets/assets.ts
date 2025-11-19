@@ -181,6 +181,17 @@ export const userData:User[] = [
     { firstName:"David", lastName:"Brown", role:"Developer", email:"david@example.com" },
     { firstName:"Eve", lastName:"Davis", role:"Manager", email:"eve@example.com" }
 ]
+
+type NotificationSettings = {
+    title:string,
+    desc:string
+}
+
+export const notificationSettings:NotificationSettings[] = [
+    { title:"Email Notifications", desc:"Receive email updates about your activity" },
+    { title:"Push Notifications", desc:"Receive push notifications on your device" },
+    { title:"Chat Messages", desc:"Get notified for new chat messages" }
+]
     
 
 
