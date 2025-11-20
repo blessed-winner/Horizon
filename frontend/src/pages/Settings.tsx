@@ -1,7 +1,9 @@
 import { Save } from "lucide-react"
 import { notificationSettings } from "../assets/assets"
+import { useThemeStore } from "../Store/useThemeStore"
 
 const Settings = () => {
+  const {isDark,toggleDark} = useThemeStore() 
   return (
     <div className="flex-1 p-6 md:p-10">
       <div className="space-y-8">
@@ -70,7 +72,7 @@ const Settings = () => {
               </div>
               <div>
                   <label className="relative inline-flex items-center cursor-pointer">
-                  <input type="checkbox" className="sr-only peer" />
+                  <input checked={isDark} onChange={toggleDark} type="checkbox" className="sr-only peer" />
                   <div className="w-11 h-6 bg-gray-300 peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-blue-500 transition-all"></div>
                   <span
                    className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-all 
