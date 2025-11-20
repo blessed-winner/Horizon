@@ -7,8 +7,14 @@ import Chat from "./pages/Chat"
 import Team from "./pages/Team"
 import Settings from "./pages/Settings"
 import Tasks from "./pages/Tasks"
+import { useThemeStore } from "./Store/useThemeStore"
+import { useEffect } from "react"
 
 const App = () => {
+     const isDark = useThemeStore((state)=>state.isDark)
+     useEffect(()=>{
+          document.documentElement.classList.toggle("dark",isDark)
+     },[isDark])
   return (
       <Routes>
            <Route path="/" element = {<Landing/>}/>
